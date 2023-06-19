@@ -42,7 +42,7 @@ func MountSPA(r chi.Router, path string, root fs.FS, cc ...configurator) error {
 	cc = append(
 		[]configurator{UrlPrefix(path), Fallbacks("index.html")},
 		// appnd all configurators at the end and allow override of prefix & fallbacks
-		cc...
+		cc...,
 	)
 
 	handler, err := FileServer(root, cc...)

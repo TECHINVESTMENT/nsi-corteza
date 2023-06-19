@@ -373,7 +373,8 @@ func (g DepGraph) allNodes() (out []*depNode) {
 // If all resources define parents, then some home brew logic is ran
 //
 // @todo when we add more resources, we might need to expand this; for now
-//       it should work just fine.
+//
+//	it should work just fine.
 func (g depSubgraph) Roots() (out NodeSet) {
 	for _, n := range g.nodes {
 		if needyResources[n.Node.ResourceType] {

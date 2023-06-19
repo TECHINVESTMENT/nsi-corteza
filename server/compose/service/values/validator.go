@@ -124,7 +124,6 @@ func (vldtr *validator) FileRefChecker(fn ReferenceChecker) {
 
 // Run validates record and it's values against module & module fields options
 //
-//
 // Validation is done in phases for optimal resource usage:
 //   - check if required values are present
 //   - check for unique-multi-value in multi value fields

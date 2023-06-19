@@ -178,7 +178,8 @@ func mountServiceHandlers(r chi.Router, log *zap.Logger, opt options.HttpServerO
 }
 
 // @todo move all these routes under /console and
-//       output JSON instead of plain raw text
+//
+//	output JSON instead of plain raw text
 func mountDebugHandler(r chi.Router, log *zap.Logger) {
 	log.Debug("route debugger enabled: /__routes")
 	r.Get("/__routes", debugRoutes(r))

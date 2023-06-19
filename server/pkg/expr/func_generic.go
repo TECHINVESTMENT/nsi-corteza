@@ -115,8 +115,6 @@ func isMap(v interface{}) bool {
 
 // toArray removes expr types (if wrapped) and checks if the variable is slice
 // internal only
-//
-//
 func toSlice(vv interface{}) (interface{}, error) {
 	vv = UntypedValue(vv)
 

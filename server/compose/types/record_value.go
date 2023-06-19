@@ -256,7 +256,6 @@ func (set RecordValueSet) Merge(mfs ModuleFieldSet, new RecordValueSet, canAcces
 //
 // This satisfies current requirements where record values are always
 // manipulated as a whole (not partial)
-//
 func (set RecordValueSet) merge(new RecordValueSet) (out RecordValueSet) {
 	if len(set) == 0 {
 		// Empty set, copy all new values and return them

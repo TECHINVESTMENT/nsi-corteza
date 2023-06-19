@@ -72,12 +72,12 @@ func TestResourceMatch(t *testing.T) {
 	}
 }
 
-//cpu: Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz
-//Benchmark_MatchResource100-16        	 6527383	       183.2 ns/op
-//Benchmark_MatchResource1000-16       	 6335626	       183.5 ns/op
-//Benchmark_MatchResource10000-16      	 6565214	       183.5 ns/op
-//Benchmark_MatchResource100000-16     	 6541002	       183.7 ns/op
-//Benchmark_MatchResource1000000-16    	 6542052	       183.5 ns/op
+// cpu: Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz
+// Benchmark_MatchResource100-16        	 6527383	       183.2 ns/op
+// Benchmark_MatchResource1000-16       	 6335626	       183.5 ns/op
+// Benchmark_MatchResource10000-16      	 6565214	       183.5 ns/op
+// Benchmark_MatchResource100000-16     	 6541002	       183.7 ns/op
+// Benchmark_MatchResource1000000-16    	 6542052	       183.5 ns/op
 func benchmarkMatchResource(b *testing.B, c int) {
 	b.StartTimer()
 

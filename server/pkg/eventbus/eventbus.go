@@ -104,7 +104,7 @@ func (b *eventbus) wait() {
 
 // Finds all registered handlers compatible with given event
 //
-// It returns sorted handlers
+// # It returns sorted handlers
 //
 // There is still room for improvement (performance wise) by indexing
 // resources and events of each handler.

@@ -6,18 +6,17 @@ import (
 
 // function checks all given rules
 //
-//  - indexRules are rules optimized for quick lookup rules ar grouped in 2 levels:
-//    by operation, and role, containing slice of rules (for specific operation and role)
-//    at the deepest level
+//   - indexRules are rules optimized for quick lookup rules ar grouped in 2 levels:
+//     by operation, and role, containing slice of rules (for specific operation and role)
+//     at the deepest level
 //
-//  - rolesByKind are roles optimized for quick lookup
-//    roles are grouped by kind and each kind contains fast-lookup (map[role-id]bool)
+//   - rolesByKind are roles optimized for quick lookup
+//     roles are grouped by kind and each kind contains fast-lookup (map[role-id]bool)
 //
-//  - op and res represent operation and resource that are checked
+//   - op and res represent operation and resource that are checked
 //
-//  - trace is optional; when not nil, function will update trace struct
-//    with information as it traverses and checks the rules
-//
+//   - trace is optional; when not nil, function will update trace struct
+//     with information as it traverses and checks the rules
 func check(indexedRules OptRuleSet, rolesByKind partRoles, op, res string, trace *Trace) Access {
 	baseTraceInfo(trace, res, op, rolesByKind)
 

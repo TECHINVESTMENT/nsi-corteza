@@ -25,7 +25,7 @@ type (
 	paramOpt func(p *Param)
 )
 
-//const
+// const
 func NewParam(name string, opts ...paramOpt) *Param {
 	p := &Param{Name: name}
 	for _, opt := range opts {

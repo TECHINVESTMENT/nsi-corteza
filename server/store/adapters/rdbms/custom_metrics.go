@@ -86,7 +86,6 @@ func (s Store) dailyMetrics(ctx context.Context, tbl exp.IdentifierExpression, e
 }
 
 // Assembles select expression that calculates total + each given ts field + valid
-//
 func timestampStatExpr(fields ...string) []interface{} {
 	var (
 		valid = []goqu.Expression{}

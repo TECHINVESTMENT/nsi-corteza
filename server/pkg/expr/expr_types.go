@@ -290,7 +290,6 @@ func (t *Array) Decode(dst reflect.Value) error {
 //
 // It allows gval lib to access Record's underlying value (*types.Array)
 // and it's fields
-//
 func (t Array) SelectGVal(ctx context.Context, k string) (interface{}, error) {
 	if s, err := t.Select(k); err != nil {
 		return nil, err

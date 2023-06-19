@@ -163,12 +163,12 @@ func newConfig(provider *Provider, authURL, tokenURL string, scopes []string) *o
 	return c
 }
 
-//RefreshToken refresh token is not provided by Nylas
+// RefreshToken refresh token is not provided by Nylas
 func (p *Provider) RefreshToken(refreshToken string) (*oauth2.Token, error) {
 	return nil, errors.New("Refresh token is not provided by Nylas")
 }
 
-//RefreshTokenAvailable refresh token is not provided by Nylas
+// RefreshTokenAvailable refresh token is not provided by Nylas
 func (p *Provider) RefreshTokenAvailable() bool {
 	return false
 }

@@ -60,7 +60,7 @@ type (
 
 // Exec is a utility for executing series of commands
 //
-// Parameters can be string, Stringer interface or goqu's exp.SQLExpression
+// # Parameters can be string, Stringer interface or goqu's exp.SQLExpression
 //
 // Any other type will result in panic
 func Exec(ctx context.Context, db sqlx.ExtContext, ss ...any) (err error) {

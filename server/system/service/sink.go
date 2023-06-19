@@ -279,7 +279,6 @@ func (svc sink) handleRequest(r *http.Request) (*SinkRequestUrlParams, error) {
 // This is useful to enforce mail processing
 // b) Max-body-size check might be limited via sink params
 // and io.Reader that is passed is limited w/ io.LimitReader
-//
 func (svc *sink) process(srup *SinkRequestUrlParams, w http.ResponseWriter, r *http.Request, body io.Reader) error {
 	var (
 		err         error

@@ -32,10 +32,10 @@ func DetectLanguage(ll *service) func(next http.Handler) http.Handler {
 // parsed value as language.Tag
 //
 // There are 4 valid scenarios for :
-//  - lang == 'skip':   returns und & services will (likely) ignore all translatable content
-//  - invalid language: (same as skip)
-//  - valid language:   returns valid language; services will treat translatable content from the payload as translations
-//  - no header:        returns default language; (same as valid language)
+//   - lang == 'skip':   returns und & services will (likely) ignore all translatable content
+//   - invalid language: (same as skip)
+//   - valid language:   returns valid language; services will treat translatable content from the payload as translations
+//   - no header:        returns default language; (same as valid language)
 func resolveContentLanguageHeaders(h http.Header, ll *service) language.Tag {
 	if ll == nil || ll.Default() == nil {
 		return language.Und

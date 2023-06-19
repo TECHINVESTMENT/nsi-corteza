@@ -239,12 +239,12 @@ func Test_checkWithTrace(t *testing.T) {
 	}
 }
 
-//cpu: Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz
-//Benchmark_Check100-16        	12395438	        95.24 ns/op
-//Benchmark_Check1000-16       	12507883	        96.34 ns/op
-//Benchmark_Check10000-16      	11788594	        96.85 ns/op
-//Benchmark_Check100000-16     	11679951	       100.1 ns/op
-//Benchmark_Check1000000-16    	 4670353	       287.3 ns/op
+// cpu: Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz
+// Benchmark_Check100-16        	12395438	        95.24 ns/op
+// Benchmark_Check1000-16       	12507883	        96.34 ns/op
+// Benchmark_Check10000-16      	11788594	        96.85 ns/op
+// Benchmark_Check100000-16     	11679951	       100.1 ns/op
+// Benchmark_Check1000000-16    	 4670353	       287.3 ns/op
 func benchmarkCheck(b *testing.B, c int) {
 	var (
 		// resting with 50 roles

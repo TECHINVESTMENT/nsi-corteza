@@ -114,7 +114,6 @@ var _ gval.Selector = &ComposeRecord{}
 //
 // It allows gval lib to access Record's underlying value (*types.Record)
 // and it's fields
-//
 func (t *ComposeRecord) SelectGVal(_ context.Context, k string) (interface{}, error) {
 	t.mux.RLock()
 	defer t.mux.RUnlock()
@@ -242,7 +241,6 @@ func (t *ComposeRecordValues) AssignFieldValue(pp []string, val expr.TypedValue)
 //
 // It allows gval lib to access Record's underlying value (*types.RecordValues)
 // and it's fields
-//
 func (t *ComposeRecordValues) SelectGVal(_ context.Context, k string) (interface{}, error) {
 	return composeRecordValuesGValSelector(t.value, k)
 }

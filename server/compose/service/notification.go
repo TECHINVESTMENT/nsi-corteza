@@ -96,9 +96,10 @@ func (svc notification) SendEmail(ctx context.Context, n *types.EmailNotificatio
 // procEmailRecipients validates, resolves, formats and attaches set of recipients to message
 //
 // Supports 3 input formats:
-//  - <valid email>
-//  - <valid email><space><name...>
-//  - <userID>
+//   - <valid email>
+//   - <valid email><space><name...>
+//   - <userID>
+//
 // Last one is then translated into valid email + name (when/if possible)
 func (svc notification) procEmailRecipients(ctx context.Context, m *gomail.Message, field string, rr ...string) (err error) {
 	var (

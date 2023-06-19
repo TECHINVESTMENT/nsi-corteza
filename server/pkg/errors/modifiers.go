@@ -25,7 +25,6 @@ func MetaTrim(kk ...interface{}) mfn {
 }
 
 // StackSkip skips n frames in the stack
-//
 func StackSkip(n int) mfn {
 	return func(e *Error) {
 		if n > len(e.stack) {

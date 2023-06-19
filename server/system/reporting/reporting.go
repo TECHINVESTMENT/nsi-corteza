@@ -374,7 +374,8 @@ func mappingToFrameCols(mm []dal.AttributeMapping) FrameColumnSet {
 }
 
 // @note current implementation a bit _rushed_ since I'll probably rethink
-//       how the pipeline handles attributes -- will revisit then.
+//
+//	how the pipeline handles attributes -- will revisit then.
 func mappingToFrameCol(m dal.AttributeMapping) FrameColumn {
 	p := m.Properties()
 

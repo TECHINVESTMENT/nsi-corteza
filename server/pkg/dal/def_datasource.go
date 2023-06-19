@@ -242,8 +242,9 @@ func (def *Datasource) clobber(s PipelineStep) (ok bool) {
 // - The QL node return parameter is applied only to the aggregated dataset
 //
 // @todo should we change the store's API to accept 2x filter.Filter? I think
-//       that would allow the underlaying driver to decide how to handle them
-//       instead of relying on what SQL does.
+//
+//	that would allow the underlaying driver to decide how to handle them
+//	instead of relying on what SQL does.
 func (def *Datasource) getAggregationFilters(base, agg internalFilter) (filter internalFilter, having *ql.ASTNode, err error) {
 	var typedV expr.TypedValue
 	filter = base

@@ -80,7 +80,6 @@ func connectBase(ctx context.Context, cfg *rdbms.ConnConfig) (db *sqlx.DB, err e
 // error in case of incorrect param value
 //
 // See https://github.com/go-sql-driver/mysql for available dsn params
-//
 func NewConfig(in string) (*rdbms.ConnConfig, error) {
 	const (
 		schemeDel   = "://"

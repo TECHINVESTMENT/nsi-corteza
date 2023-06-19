@@ -71,7 +71,7 @@ func TestMain(m *testing.M) {
 		app.Opt.ActionLog.WorkflowFunctionsEnabled = true
 		defStore = app.Store
 		eventbus.Set(eventBus)
-		
+
 		return nil
 	})
 

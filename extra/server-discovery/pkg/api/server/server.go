@@ -35,9 +35,9 @@ const (
 //
 // Waiting state
 // This is initial state that with some simple route handlers:
-//  - /version
-//  - /healthcheck
-//  - /healthcheck
+//   - /version
+//   - /healthcheck
+//   - /healthcheck
 func New(log *zap.Logger, envOpt options.EnvironmentOpt, httpOpt options.HttpServerOpt, waitForOpt options.WaitForOpt, searcherOpt options.SearcherOpt) *server {
 	s := &server{
 		endpoints: make([]func(r chi.Router), 0),

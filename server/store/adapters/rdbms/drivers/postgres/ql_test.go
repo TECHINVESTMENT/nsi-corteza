@@ -9,7 +9,8 @@ import (
 )
 
 // @todo Ql functions should be under store/tests so it can be tested across all drivers along with generated tests.
-// 		for now, Its test coverage is limited per driver.
+//
+//	for now, Its test coverage is limited per driver.
 func TestConverter(t *testing.T) {
 	const SELECT = "SELECT "
 	var (

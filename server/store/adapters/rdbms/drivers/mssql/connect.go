@@ -78,7 +78,6 @@ func connectBase(ctx context.Context, cfg *rdbms.ConnConfig) (db *sqlx.DB, err e
 // error in case of incorrect param value
 //
 // See https://github.com/go-sql-driver/mysql for available dsn params
-//
 func NewConfig(dsn string) (c *rdbms.ConnConfig, err error) {
 	const (
 		validScheme = "sqlserver"
